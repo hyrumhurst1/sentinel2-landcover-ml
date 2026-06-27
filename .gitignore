@@ -10,6 +10,8 @@ data/hf_cache/
 data/*.npz
 run.log
 CODEX_REVIEW.md
+SUBMISSION.md
+paper/paper_submission.html
 
 # Internal study aid, keep local
 paper/defense_brief.md

@@ -1,0 +1,210 @@
+{
+  "dataset": "blanchon/EuroSAT_RGB",
+  "n_images": 27000,
+  "n_features": 49,
+  "n_classes": 10,
+  "classes": [
+    "Annual Crop",
+    "Forest",
+    "Herbaceous Vegetation",
+    "Highway",
+    "Industrial Buildings",
+    "Pasture",
+    "Permanent Crop",
+    "Residential Buildings",
+    "River",
+    "SeaLake"
+  ],
+  "split": "stratified 75/25 held-out",
+  "n_train": 20250,
+  "n_test": 6750,
+  "models": {
+    "RandomForest": {
+      "accuracy": 0.8592592592592593,
+      "macro_f1": 0.8502152065682338,
+      "kappa": 0.843324812402078,
+      "train_seconds": 10.3
+    },
+    "HistGradBoost": {
+      "accuracy": 0.8842962962962962,
+      "macro_f1": 0.8781392231948197,
+      "kappa": 0.8712090905481874,
+      "train_seconds": 30.6
+    },
+    "kNN(k=5)": {
+      "accuracy": 0.8234074074074074,
+      "macro_f1": 0.8135377430692697,
+      "kappa": 0.803404263117225,
+      "train_seconds": 0.9
+    },
+    "LogReg": {
+      "accuracy": 0.8355555555555556,
+      "macro_f1": 0.826990701164997,
+      "kappa": 0.8169882755251587,
+      "train_seconds": 3.2
+    },
+    "Baseline(majority)": {
+      "accuracy": 0.1111111111111111,
+      "macro_f1": 0.02,
+      "kappa": 0.0,
+      "train_seconds": 0.0
+    }
+  },
+  "best_model": "HistGradBoost",
+  "water_classes": [
+    "River",
+    "SeaLake"
+  ],
+  "per_class_f1": {
+    "Annual Crop": 0.9051,
+    "Forest": 0.9812,
+    "Herbaceous Vegetation": 0.8978,
+    "Highway": 0.6613,
+    "Industrial Buildings": 0.9188,
+    "Pasture": 0.8826,
+    "Permanent Crop": 0.823,
+    "Residential Buildings": 0.953,
+    "River": 0.7821,
+    "SeaLake": 0.9765
+  },
+  "confusion_matrix": [
+    [
+      687,
+      0,
+      9,
+      10,
+      0,
+      9,
+      14,
+      0,
+      13,
+      8
+    ],
+    [
+      0,
+      732,
+      5,
+      0,
+      0,
+      9,
+      0,
+      0,
+      3,
+      1
+    ],
+    [
+      5,
+      0,
+      685,
+      13,
+      4,
+      2,
+      23,
+      2,
+      16,
+      0
+    ],
+    [
+      29,
+      1,
+      19,
+      411,
+      23,
+      13,
+      35,
+      25,
+      69,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      33,
+      577,
+      0,
+      1,
+      11,
+      1,
+      0
+    ],
+    [
+      7,
+      2,
+      14,
+      9,
+      0,
+      440,
+      11,
+      0,
+      16,
+      1
+    ],
+    [
+      20,
+      0,
+      32,
+      44,
+      4,
+      10,
+      502,
+      2,
+      11,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      12,
+      14,
+      0,
+      1,
+      720,
+      2,
+      0
+    ],
+    [
+      13,
+      3,
+      7,
+      86,
+      9,
+      8,
+      8,
+      1,
+      488,
+      2
+    ],
+    [
+      7,
+      4,
+      2,
+      0,
+      0,
+      6,
+      0,
+      0,
+      4,
+      727
+    ]
+  ],
+  "paper_tokens": {
+    "dataset": "blanchon/EuroSAT_RGB",
+    "n_images": 27000,
+    "n_features": 49,
+    "n_classes": 10,
+    "n_train": 20250,
+    "n_test": 6750,
+    "best_model": "HistGradBoost",
+    "best_accuracy": 0.8843,
+    "best_macro_f1": 0.8781,
+    "best_kappa": 0.8712,
+    "rf_accuracy": 0.8593,
+    "rf_kappa": 0.8433,
+    "logreg_accuracy": 0.8356,
+    "knn_accuracy": 0.8234,
+    "baseline_accuracy": 0.1111,
+    "water_f1": 0.8793
+  }
+}

@@ -1,0 +1,17 @@
+# Environment
+.venv/
+__pycache__/
+*.pyc
+
+# HF dataset cache (large; re-downloads automatically)
+data/hf_cache/
+
+# Generated rendered paper (regenerate with fill_paper.py)
+paper/paper_filled.md
+
+# Internal study aid, keep local
+paper/defense_brief.md
+
+# OS
+.DS_Store
+Thumbs.db

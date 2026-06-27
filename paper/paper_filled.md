@@ -21,7 +21,7 @@ features fed to classical machine-learning classifiers. Using the EuroSAT
 benchmark (`27000` Sentinel-2 image patches across `10`
 land-cover classes), we extract `49` interpretable features per image
 and evaluate four classifiers with `5`-fold stratified cross-validation
-over the full dataset. The best model (HistGradBoost) reached a cross-validated
+over the full dataset. The best model (histogram-based gradient boosting) reached a cross-validated
 accuracy of `0.8874` (standard deviation `0.0035` across
 folds), a macro-averaged F1 of `0.8812`, and a Cohen's kappa of
 `0.8747`, against a majority-class baseline of `0.1111`. The
@@ -95,7 +95,7 @@ or specialized geospatial service is required.
 
 Every classifier far exceeds the `0.1111` majority-class baseline,
 confirming that the models learn real structure rather than guessing. Under
-`5`-fold cross-validation the best model, HistGradBoost, reached an
+`5`-fold cross-validation the best model, histogram-based gradient boosting, reached an
 accuracy of `0.8874` (standard deviation `0.0035` across
 folds), a macro F1 of `0.8812`, and a kappa of `0.8747`. The
 random forest followed at `0.8655` accuracy (kappa `0.8503`), then

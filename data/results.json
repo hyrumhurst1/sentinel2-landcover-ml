@@ -15,178 +15,251 @@
     "River",
     "SeaLake"
   ],
-  "split": "stratified 75/25 held-out",
-  "n_train": 20250,
-  "n_test": 6750,
-  "models": {
+  "evaluation": "5-fold stratified cross-validation",
+  "cv_results": {
     "RandomForest": {
-      "accuracy": 0.8592592592592593,
-      "macro_f1": 0.8502152065682338,
-      "kappa": 0.843324812402078,
-      "train_seconds": 10.3
+      "accuracy_mean": 0.8655185185185186,
+      "accuracy_std": 0.004423407000543292,
+      "f1_macro_mean": 0.8571578060810616,
+      "kappa_mean": 0.8503198023813505,
+      "kappa_std": 0.004920561457033291,
+      "seconds": 68.7
     },
     "HistGradBoost": {
-      "accuracy": 0.8842962962962962,
-      "macro_f1": 0.8781392231948197,
-      "kappa": 0.8712090905481874,
-      "train_seconds": 30.6
+      "accuracy_mean": 0.8874444444444445,
+      "accuracy_std": 0.0035319432004095094,
+      "f1_macro_mean": 0.8811717853406791,
+      "kappa_mean": 0.8747276376701218,
+      "kappa_std": 0.003935178908877364,
+      "seconds": 240.5
     },
     "kNN(k=5)": {
-      "accuracy": 0.8234074074074074,
-      "macro_f1": 0.8135377430692697,
-      "kappa": 0.803404263117225,
-      "train_seconds": 0.9
+      "accuracy_mean": 0.8247777777777777,
+      "accuracy_std": 0.006332575219949906,
+      "f1_macro_mean": 0.8159505066285699,
+      "kappa_mean": 0.8049768318346647,
+      "kappa_std": 0.007030299536021741,
+      "seconds": 4.2
     },
     "LogReg": {
-      "accuracy": 0.8355555555555556,
-      "macro_f1": 0.826990701164997,
-      "kappa": 0.8169882755251587,
-      "train_seconds": 3.2
+      "accuracy_mean": 0.8353333333333334,
+      "accuracy_std": 0.0036106837353937515,
+      "f1_macro_mean": 0.826390734003235,
+      "kappa_mean": 0.816750733717743,
+      "kappa_std": 0.00400621316746143,
+      "seconds": 20.3
     },
     "Baseline(majority)": {
-      "accuracy": 0.1111111111111111,
-      "macro_f1": 0.02,
-      "kappa": 0.0,
-      "train_seconds": 0.0
+      "accuracy_mean": 0.11111111111111112,
+      "accuracy_std": 1.3877787807814457e-17,
+      "f1_macro_mean": 0.02,
+      "kappa_mean": 0.0,
+      "kappa_std": 0.0,
+      "seconds": 0.2
     }
   },
   "best_model": "HistGradBoost",
+  "best_oof_accuracy": 0.8874444444444445,
+  "best_oof_kappa": 0.874727766136512,
+  "best_oof_macro_f1": 0.8811906309603396,
   "water_classes": [
     "River",
     "SeaLake"
   ],
   "per_class_f1": {
-    "Annual Crop": 0.9051,
-    "Forest": 0.9812,
-    "Herbaceous Vegetation": 0.8978,
-    "Highway": 0.6613,
-    "Industrial Buildings": 0.9188,
-    "Pasture": 0.8826,
-    "Permanent Crop": 0.823,
-    "Residential Buildings": 0.953,
-    "River": 0.7821,
-    "SeaLake": 0.9765
+    "Annual Crop": 0.903,
+    "Forest": 0.9808,
+    "Herbaceous Vegetation": 0.8976,
+    "Highway": 0.6624,
+    "Industrial Buildings": 0.9271,
+    "Pasture": 0.8866,
+    "Permanent Crop": 0.8219,
+    "Residential Buildings": 0.9522,
+    "River": 0.7992,
+    "SeaLake": 0.9811
   },
   "confusion_matrix": [
     [
-      687,
-      0,
-      9,
+      2717,
       10,
-      0,
-      9,
-      14,
-      0,
-      13,
-      8
-    ],
-    [
-      0,
-      732,
-      5,
-      0,
-      0,
-      9,
-      0,
-      0,
-      3,
-      1
-    ],
-    [
-      5,
-      0,
-      685,
-      13,
-      4,
-      2,
-      23,
-      2,
-      16,
-      0
-    ],
-    [
-      29,
+      26,
+      53,
       1,
-      19,
-      411,
-      23,
-      13,
-      35,
-      25,
-      69,
-      0
+      49,
+      70,
+      0,
+      49,
+      25
     ],
     [
       0,
+      2941,
+      13,
+      1,
       0,
-      2,
       33,
-      577,
       0,
-      1,
-      11,
-      1,
-      0
+      0,
+      5,
+      7
     ],
     [
-      7,
-      2,
-      14,
+      17,
       9,
-      0,
-      440,
-      11,
-      0,
-      16,
-      1
-    ],
-    [
-      20,
-      0,
-      32,
-      44,
-      4,
-      10,
-      502,
-      2,
-      11,
-      0
-    ],
-    [
-      0,
-      0,
-      1,
-      12,
+      2705,
+      59,
       14,
-      0,
-      1,
-      720,
-      2,
+      21,
+      131,
+      11,
+      33,
       0
     ],
     [
-      13,
-      3,
-      7,
-      86,
-      9,
-      8,
-      8,
-      1,
-      488,
+      97,
+      2,
+      78,
+      1608,
+      107,
+      45,
+      169,
+      101,
+      291,
       2
     ],
     [
-      7,
-      4,
       2,
       0,
+      7,
+      101,
+      2335,
       0,
-      6,
+      3,
+      41,
+      11,
+      0
+    ],
+    [
+      24,
+      15,
+      37,
+      34,
+      0,
+      1795,
+      48,
+      0,
+      44,
+      3
+    ],
+    [
+      65,
+      0,
+      127,
+      140,
+      17,
+      39,
+      2067,
+      11,
+      34,
+      0
+    ],
+    [
       0,
       0,
-      4,
-      727
+      5,
+      71,
+      37,
+      0,
+      9,
+      2877,
+      1,
+      0
+    ],
+    [
+      75,
+      10,
+      26,
+      285,
+      26,
+      51,
+      33,
+      2,
+      1988,
+      4
+    ],
+    [
+      21,
+      10,
+      3,
+      3,
+      0,
+      16,
+      0,
+      0,
+      19,
+      2928
+    ]
+  ],
+  "top_features": [
+    [
+      "texture_grad_mean",
+      0.11447260184319032
+    ],
+    [
+      "texture_grad_std",
+      0.05439622079028635
+    ],
+    [
+      "nd_GB_mean",
+      0.04474956174938694
+    ],
+    [
+      "B_std",
+      0.0437753011636647
+    ],
+    [
+      "R_std",
+      0.04150871337346496
+    ],
+    [
+      "nd_GR_std",
+      0.03991702894729406
+    ],
+    [
+      "G_std",
+      0.03564009040879979
+    ],
+    [
+      "bright_std",
+      0.03554505093768448
+    ],
+    [
+      "nd_GR_mean",
+      0.03495752386494995
+    ],
+    [
+      "nd_RB_mean",
+      0.03473757241701761
+    ],
+    [
+      "nd_GB_std",
+      0.03131232416202301
+    ],
+    [
+      "nd_RB_std",
+      0.03103833736918728
+    ],
+    [
+      "R_p90",
+      0.028466656768292083
+    ],
+    [
+      "B_hist7",
+      0.022413177256688455
+    ],
+    [
+      "B_hist3",
+      0.018956085022235072
     ]
   ],
   "paper_tokens": {
@@ -194,17 +267,21 @@
     "n_images": 27000,
     "n_features": 49,
     "n_classes": 10,
-    "n_train": 20250,
-    "n_test": 6750,
+    "n_folds": 5,
     "best_model": "HistGradBoost",
-    "best_accuracy": 0.8843,
-    "best_macro_f1": 0.8781,
-    "best_kappa": 0.8712,
-    "rf_accuracy": 0.8593,
-    "rf_kappa": 0.8433,
-    "logreg_accuracy": 0.8356,
-    "knn_accuracy": 0.8234,
+    "best_accuracy": 0.8874,
+    "best_accuracy_std": 0.0035,
+    "best_kappa": 0.8747,
+    "best_kappa_std": 0.0039,
+    "best_macro_f1": 0.8812,
+    "rf_accuracy": 0.8655,
+    "rf_kappa": 0.8503,
+    "logreg_accuracy": 0.8353,
+    "knn_accuracy": 0.8248,
     "baseline_accuracy": 0.1111,
-    "water_f1": 0.8793
+    "water_f1": 0.8901,
+    "top_feature_1": "texture_grad_mean",
+    "top_feature_2": "texture_grad_std",
+    "top_feature_3": "nd_GB_mean"
   }
 }

@@ -6,6 +6,11 @@ __pycache__/
 # HF dataset cache (large; re-downloads automatically)
 data/hf_cache/
 
+# Regenerable feature cache + run log + local working docs
+data/*.npz
+run.log
+CODEX_REVIEW.md
+
 # Internal study aid, keep local
 paper/defense_brief.md
 

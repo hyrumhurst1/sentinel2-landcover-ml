@@ -4,6 +4,8 @@
 **Affiliation:** Independent researcher
 **Contact:** hyrumhurts@gmail.com
 
+*This is a non-peer-reviewed preprint submitted to EarthArXiv. It has not been peer reviewed.*
+
 > Draft. Numbers written as `{{like_this}}` are filled automatically from
 > `data/results.json` (`python src/fill_paper.py`). Every result comes from a
 > single reproducible run of `src/run_study.py`. Read `paper/defense_brief.md`
